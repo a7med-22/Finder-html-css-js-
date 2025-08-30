@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finder - Find Top-Rated Certified Pros</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Added fixed customize button -->
+    <button class="fixed-customize-btn" onclick="toggleCustomize()">
+      CUSTOMIZE
+    </button>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="nav-container">
+        <div class="logo">Finder</div>
+        <ul class="nav-menu">
+          <li class="nav-item dropdown">
+            <a href="#home" class="nav-link"
+              >Home <i class="fas fa-chevron-down"></i
+            ></a>
+            <div class="dropdown-menu">
+              <div class="dropdown-column">
+                <div class="dropdown-section">
+                  <h4>Real Estate</h4>
+                  <p>Property listings directory</p>
+                </div>
+                <div class="dropdown-section">
+                  <h4>Cars</h4>
+                  <p>Vehicle sales listings</p>
+                </div>
+                <div class="dropdown-section">
+                  <h4>Contractors</h4>
+                  <p>Professional services directory</p>
+                </div>
+                <div class="dropdown-section">
+                  <h4>Doctors</h4>
+                  <p>Medical professionals listings</p>
+                </div>
+                <div class="dropdown-section">
+                  <h4>Events</h4>
+                  <p>Upcoming events listings</p>
+                </div>
+                <div class="dropdown-section">
+                  <h4>City Guide</h4>
+                  <p>Local places directory</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#listings" class="nav-link"
+              >Listings <i class="fas fa-chevron-down"></i
+            ></a>
+            <div class="dropdown-menu">
+              <div class="dropdown-column">
+                <div class="dropdown-section">
+                  <h4>Real Estate</h4>
+                  <ul>
+                    <li><a href="#">Map/Listings Split View</a></li>
+                    <li><a href="#">Property Details Page</a></li>
+                    <li><a href="#">Vendor Page</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown-section">
+                  <h4>Cars</h4>
+                  <ul>
+                    <li><a href="#">Listings Grid View</a></li>
+                    <li><a href="#">Listings List View</a></li>
+                    <li><a href="#">Car Details Page</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown-section">
+                  <h4>Contractors</h4>
+                  <ul>
+                    <li><a href="#">Listings with Side Filters</a></li>
+                    <li><a href="#">Contractor Details Page</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown-section">
+                  <h4>Doctors</h4>
+                  <ul>
+                    <li><a href="#">Listings List View</a></li>
+                    <li><a href="#">Listings Grid View</a></li>
+                    <li><a href="#">Doctor Details Page</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="dropdown-column">
+                <div class="dropdown-section">
+                  <h4>Events</h4>
+                  <ul>
+                    <li><a href="#">Listings with Top Filters</a></li>
+                    <li><a href="#">Event Details Page</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown-section">
+                  <h4>City Guide</h4>
+                  <ul>
+                    <li><a href="#">Listings with Side Filters</a></li>
+                    <li><a href="#">Listings with Top Filters</a></li>
+                    <li><a href="#">Place Details Page</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown-section">
+                  <h4>Add Property</h4>
+                  <ul>
+                    <li><a href="#">Property type</a></li>
+                    <li><a href="#">Location</a></li>
+                    <li><a href="#">Photos and Videos</a></li>
+                    <li><a href="#">Property Details</a></li>
+                    <li><a href="#">Price</a></li>
+                    <li><a href="#">Contact Info</a></li>
+                    <li><a href="#">Ad Promotion</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="dropdown-column">
+                <div class="dropdown-section">
+                  <h4>Add Contractor</h4>
+                  <ul>
+                    <li><a href="#">Business Location</a></li>
+                    <li><a href="#">Choose Services</a></li>
+                    <li><a href="#">Profile Details</a></li>
+                    <li><a href="#">Price and Hours</a></li>
+                    <li><a href="#">Create First Project</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown-section">
+                  <h4>Add (Sell) Car</h4>
+                  <ul>
+                    <li><a href="#">Add (Sell) Car Page</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#account" class="nav-link"
+              >Account <i class="fas fa-chevron-down"></i
+            ></a>
+            <div class="dropdown-menu">
+              <div class="dropdown-column">
+                <div class="dropdown-section">
+                  <h4>Auth Pages</h4>
+                  <p>Authentication and registration</p>
+                </div>
+                <div class="dropdown-section">
+                  <h4>My Profile</h4>
+                  <p>Profile management settings</p>
+                </div>
+                <div class="dropdown-section">
+                  <h4>My Listings</h4>
+                  <p>Manage your property listings</p>
+                </div>
+                <div class="dropdown-section">
+                  <h4>Reviews</h4>
+                  <p>Customer reviews and ratings</p>
+                </div>
+                <div class="dropdown-section">
+                  <h4>Favorites</h4>
+                  <p>Saved items and bookmarks</p>
+                </div>
+                <div class="dropdown-section">
+                  <h4>Payment Details</h4>
+                  <p>Billing and payment information</p>
+                </div>
+                <div class="dropdown-section">
+                  <h4>Account Settings</h4>
+                  <p>Privacy and security settings</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#pages" class="nav-link"
+              >Pages <i class="fas fa-chevron-down"></i
+            ></a>
+            <div class="dropdown-menu">
+              <div class="dropdown-column">
+                <div class="dropdown-section">
+                  <h4>About</h4>
+                  <p>Company information and story</p>
+                </div>
+                <div class="dropdown-section">
+                  <h4>Blog</h4>
+                  <p>Latest news and articles</p>
+                </div>
+                <div class="dropdown-section">
+                  <h4>Contact</h4>
+                  <p>Get in touch with us</p>
+                </div>
+                <div class="dropdown-section">
+                  <h4>Help Center</h4>
+                  <p>Support and documentation</p>
+                </div>
+                <div class="dropdown-section">
+                  <h4>404 Error</h4>
+                  <p>Page not found template</p>
+                </div>
+                <div class="dropdown-section">
+                  <h4>Terms & Conditions</h4>
+                  <p>Legal terms and policies</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="#docs">Docs</a></li>
+          <li><a href="#components">Components</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-moon" id="theme-icon"></i>
+          </button>
+          <button class="get-started-btn">Get Started</button>
+          <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div
+      class="mobile-menu-overlay"
+      id="mobileMenuOverlay"
+      onclick="toggleMobileMenu()"
+    ></div>
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <div class="logo">Finder</div>
+        <button class="mobile-menu-close" onclick="toggleMobileMenu()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="mobile-nav-menu">
+        <div class="mobile-nav-item">
+          <div class="mobile-nav-link">
+            <span>Home</span>
+            <button
+              class="mobile-dropdown-toggle"
+              onclick="toggleMobileDropdown(this)"
+            >
+              <i class="fas fa-chevron-down"></i>
+            </button>
+          </div>
+          <div class="mobile-dropdown-content">
+            <div class="mobile-dropdown-section">
+              <h4>Real Estate</h4>
+              <p>Property listings directory</p>
+            </div>
+            <div class="mobile-dropdown-section">
+              <h4>Cars</h4>
+              <p>Vehicle sales listings</p>
+            </div>
+            <div class="mobile-dropdown-section">
+              <h4>Contractors</h4>
+              <p>Professional services directory</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-nav-item">
+          <div class="mobile-nav-link">
+            <span>Listings</span>
+            <button
+              class="mobile-dropdown-toggle"
+              onclick="toggleMobileDropdown(this)"
+            >
+              <i class="fas fa-chevron-down"></i>
+            </button>
+          </div>
+          <div class="mobile-dropdown-content">
+            <div class="mobile-dropdown-section">
+              <h4>Real Estate</h4>
+              <ul>
+                <li><a href="#">Property listings</a></li>
+                <li><a href="#">Vendor pages</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-nav-item">
+          <a href="#docs" class="mobile-nav-link">
+            <span>Docs</span>
+          </a>
+        </div>
+
+        <div class="mobile-nav-item">
+          <a href="#components" class="mobile-nav-link">
+            <span>Components</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="mobile-nav-actions">
+        <button
+          class="theme-toggle"
+          onclick="toggleTheme()"
+          style="
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--bg-light);
+            border: none;
+            padding: 1rem;
+            border-radius: 8px;
+            width: 100%;
+            cursor: pointer;
+          "
+        >
+          <i class="fas fa-moon"></i> Dark Mode
+        </button>
+        <button
+          class="get-started-btn"
+          style="width: 100%; justify-content: center"
+        >
+          Get Started
+        </button>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Explore top-rated<br />certified pros nearby</h1>
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="What service do you need?"
+          />
+          <input
+            type="text"
+            class="location-input"
+            placeholder="Enter your location"
+          />
+          <button class="search-btn">Search</button>
+        </div>
+        <div class="service-tags">
+          <a href="#" class="service-tag">Photography</a>
+          <a href="#" class="service-tag">Electrical</a>
+          <a href="#" class="service-tag">Plumbing</a>
+          <a href="#" class="service-tag">Landscaping</a>
+          <a href="#" class="service-tag">Moving</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Browse Pros Section -->
+      <section class="browse-pros">
+        <div class="section-header">
+          <h2 class="section-title">Browse pros in your area</h2>
+          <a href="#" class="view-all"
+            >View all <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+        <div class="services-grid">
+          <div class="service-item">
+            <div class="service-icon">🔧</div>
+            <span class="service-name">Plumbing</span>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">⚡</div>
+            <span class="service-name">Electrical</span>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">🧹</div>
+            <span class="service-name">Cleaning</span>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">🔨</div>
+            <span class="service-name">Handyperson</span>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">🎨</div>
+            <span class="service-name">Painting</span>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">🌿</div>
+            <span class="service-name">Plumbing</span>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">🏠</div>
+            <span class="service-name">Roofing</span>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">❄️</div>
+            <span class="service-name">Pest control</span>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">🚚</div>
+            <span class="service-name">Moving</span>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">🏗️</div>
+            <span class="service-name">Cabinetry</span>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">🌱</div>
+            <span class="service-name">Heating & Furnace</span>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">🏡</div>
+            <span class="service-name">Landscaping</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popular Projects Section with Get Matched -->
+      <section class="popular-projects">
+        <div class="section-header">
+          <h2 class="section-title">Popular projects near you</h2>
+          <a href="#" class="view-all"
+            >View all <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+        <div class="projects-container">
+          <!-- Get Matched Section -->
+          <div class="get-matched">
+            <div class="get-matched-content">
+              <h2>Get matched<br />with local pros</h2>
+              <p>for your next home project.</p>
+            </div>
+            <div class="get-matched-image">
+              <img
+                src="./images/popularProjects/banner.png"
+                alt="Get matched with local pros"
+                class="banner-image"
+              />
+            </div>
+          </div>
+
+          <!-- Projects Grid -->
+          <div class="projects-grid">
+            <div class="project-card">
+              <img
+                src="./images/popularProjects/th01.jpg"
+                alt="Decks & porches"
+                class="project-image"
+              />
+              <div class="project-info">
+                <div class="project-title">Decks & porches</div>
+                <div class="project-rating">
+                  <span class="stars">★ 4.7</span>
+                  <span class="rating-count">(95)</span>
+                </div>
+                <div class="project-price">From $1,890</div>
+              </div>
+            </div>
+            <div class="project-card">
+              <img
+                src="./images/popularProjects/th02.jpg"
+                alt="Roof repair"
+                class="project-image"
+              />
+              <div class="project-info">
+                <div class="project-title">Roof repair</div>
+                <div class="project-rating">
+                  <span class="stars">★ 4.5</span>
+                  <span class="rating-count">(48)</span>
+                </div>
+                <div class="project-price">From $1,120</div>
+              </div>
+            </div>
+            <div class="project-card">
+              <img
+                src="./images/popularProjects/th03.jpg"
+                alt="Appliance repair"
+                class="project-image"
+              />
+              <div class="project-info">
+                <div class="project-title">Appliance repair</div>
+                <div class="project-rating">
+                  <span class="stars">★ 4.8</span>
+                  <span class="rating-count">(113)</span>
+                </div>
+                <div class="project-price">From $120</div>
+              </div>
+            </div>
+            <div class="project-card">
+              <img
+                src="./images/popularProjects/th04.jpg"
+                alt="Gutter service"
+                class="project-image"
+              />
+              <div class="project-info">
+                <div class="project-title">Gutter service</div>
+                <div class="project-rating">
+                  <span class="stars">★ 5.0</span>
+                  <span class="rating-count">(73)</span>
+                </div>
+                <div class="project-price">From $390</div>
+              </div>
+            </div>
+            <div class="project-card">
+              <img
+                src="./images/popularProjects/th05.jpg"
+                alt="Home cleaning"
+                class="project-image"
+              />
+              <div class="project-info">
+                <div class="project-title">Home cleaning</div>
+                <div class="project-rating">
+                  <span class="stars">★ 4.9</span>
+                  <span class="rating-count">(256)</span>
+                </div>
+                <div class="project-price">From $75</div>
+              </div>
+            </div>
+            <div class="project-card">
+              <img
+                src="./images/popularProjects/th06.jpg"
+                alt="Fence repair"
+                class="project-image"
+              />
+              <div class="project-info">
+                <div class="project-title">Fence repair</div>
+                <div class="project-rating">
+                  <span class="stars">★ 4.8</span>
+                  <span class="rating-count">(29)</span>
+                </div>
+                <div class="project-price">From $205</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popular Home Projects -->
+      <section class="home-projects">
+        <div class="section-header">
+          <h2 class="section-title">Popular home projects</h2>
+          <a href="#" class="view-all"
+            >View all <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+        <div class="home-projects-grid">
+          <div class="home-project-card">
+            <div class="home-project-image">
+              <img
+                src="./images/popularHome/01.jpg"
+                alt="One-time cleaning service"
+              />
+              <button class="favorite-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="home-project-info">
+              <div class="project-title">One-time cleaning service</div>
+              <div class="rating">
+                <span class="stars">★ 4.9</span>
+                <span class="rating-count">(256)</span>
+              </div>
+              <div class="project-price">From $80</div>
+              <button class="book-now-btn">Book now</button>
+            </div>
+          </div>
+          <div class="home-project-card">
+            <div class="home-project-image">
+              <img
+                src="./images/popularHome/02.jpg"
+                alt="Handyperson for small projects"
+              />
+              <button class="favorite-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="home-project-info">
+              <div class="project-title">Handyperson for small projects</div>
+              <div class="rating">
+                <span class="stars">★ 4.7</span>
+                <span class="rating-count">(63)</span>
+              </div>
+              <div class="project-price">From $250</div>
+              <button class="book-now-btn">Book now</button>
+            </div>
+          </div>
+          <div class="home-project-card">
+            <div class="home-project-image">
+              <img
+                src="./images/popularHome/03.jpg"
+                alt="Fence installation & repair"
+              />
+              <button class="favorite-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="home-project-info">
+              <div class="project-title">Fence installation & repair</div>
+              <div class="rating">
+                <span class="stars">★ 4.8</span>
+                <span class="rating-count">(29)</span>
+              </div>
+              <div class="project-price">From $310</div>
+              <button class="book-now-btn">Book now</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+      <div class="main-content">
+        <h2 class="section-title">How it works</h2>
+        <p style="color: var(--text-light); margin-bottom: 2rem">
+          Connecting local service providers with the perfect contractor for
+          your job - all in just three easy steps.
+        </p>
+        <div class="steps-grid">
+          <div class="step">
+            <div class="step-icon">🔍</div>
+            <h3 class="step-title">Explore</h3>
+            <p class="step-description">
+              Browse our curated list of contractors
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-icon">📞</div>
+            <h3 class="step-title">Connect</h3>
+            <p class="step-description">
+              Contact and hire through our platform
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-icon">📋</div>
+            <h3 class="step-title">Get quotes and hire</h3>
+            <p class="step-description">
+              Receive quotes from interested contractors
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-container">
+        <div class="cta-content">
+          <h2 class="cta-title">
+            Grow your business with us.<br />Become a Pro today
+          </h2>
+          <div class="cta-buttons">
+            <a href="#" class="cta-btn primary">
+              <i class="fas fa-plus"></i> Add business
+            </a>
+            <a href="#" class="cta-btn secondary">
+              Learn more <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="cta-image">
+          <img src="./images/cta/01.jpg" alt="Professional at work" />
+        </div>
+
+        <!-- Central Spinner -->
+        <div class="cta-spinner">
+          <div class="spinner-circle">
+            <div class="spinner-text">
+              <svg viewBox="0 0 140 140">
+                <defs>
+                  <path
+                    id="circle-path"
+                    d="M 70, 70 m -50, 0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0"
+                  />
+                </defs>
+                <text font-size="10" font-weight="600">
+                  <textPath href="#circle-path" startOffset="0%">
+                    Feature your business customers • Feature your business
+                    customers •
+                  </textPath>
+                </text>
+              </svg>
+            </div>
+            <div class="spinner-center"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- App Section -->
+    <section class="app-section">
+      <div class="app-container">
+        <div class="app-content">
+          <div>
+            <h2 class="app-title">Get Finder App</h2>
+            <p class="app-subtitle">Explore top-rated certified pros</p>
+            <div class="app-buttons">
+              <a href="#" class="app-btn app-store">
+                <div class="app-btn-icon">
+                  <i class="fab fa-apple"></i>
+                </div>
+                <div class="app-btn-text">
+                  <span class="btn-small">Download on the</span>
+                  <span class="btn-large">App Store</span>
+                </div>
+              </a>
+              <a href="#" class="app-btn google-play">
+                <div class="app-btn-icon">
+                  <i class="fab fa-google-play"></i>
+                </div>
+                <div class="app-btn-text">
+                  <span class="btn-small">Get it on</span>
+                  <span class="btn-large">Google Play</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="app-mockup">
+          <img
+            src="./images/mobile/mobile.png"
+            alt="Finder App on mobile devices"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing References -->
+    <section class="pricing-references">
+      <div class="main-content">
+        <div class="section-header">
+          <h2 class="section-title">Common pricing references</h2>
+          <a href="#" class="view-all"
+            >View all <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-image">
+              <img
+                src="./images/pricingRefrences/1.jpg"
+                alt="Cleaning up after repairs"
+              />
+            </div>
+            <div class="pricing-info">
+              <h3 class="pricing-title">Cleaning up after repairs</h3>
+              <div class="pricing-rating">
+                <div class="stars"><i class="fas fa-star"></i> 4.5</div>
+                <span class="rating-count">(63)</span>
+              </div>
+              <p class="pricing-range">From $150</p>
+              <button class="pricing-btn">Book now</button>
+            </div>
+          </div>
+          <div class="pricing-card">
+            <div class="pricing-image">
+              <img
+                src="./images/pricingRefrences/2.jpg"
+                alt="Installation of flat roofs"
+              />
+            </div>
+            <div class="pricing-info">
+              <h3 class="pricing-title">Installation of flat roofs</h3>
+              <div class="pricing-rating">
+                <div class="stars"><i class="fas fa-star"></i> 4.3</div>
+                <span class="rating-count">(18)</span>
+              </div>
+              <p class="pricing-range">From $1,870</p>
+              <button class="pricing-btn">Book now</button>
+            </div>
+          </div>
+          <div class="pricing-card">
+            <div class="pricing-image">
+              <img
+                src="./images/pricingRefrences/3.jpg"
+                alt="Handyperson for small projects"
+              />
+            </div>
+            <div class="pricing-info">
+              <h3 class="pricing-title">Handyperson for small projects</h3>
+              <div class="pricing-rating">
+                <div class="stars"><i class="fas fa-star"></i> 4.7</div>
+                <span class="rating-count">(35)</span>
+              </div>
+              <p class="pricing-range">From $230</p>
+              <button class="pricing-btn">Book now</button>
+            </div>
+          </div>
+          <div class="pricing-card">
+            <div class="pricing-image">
+              <img
+                src="./images/pricingRefrences/4.jpg"
+                alt="One-time cleaning service"
+              />
+            </div>
+            <div class="pricing-info">
+              <h3 class="pricing-title">One-time cleaning service</h3>
+              <div class="pricing-rating">
+                <div class="stars"><i class="fas fa-star"></i> 4.9</div>
+                <span class="rating-count">(127)</span>
+              </div>
+              <p class="pricing-range">From $120</p>
+              <button class="pricing-btn">Book now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="newsletter">
+          <div class="newsletter-content">
+            <h3>Subscribe to our newsletter</h3>
+            <p>Get the latest updates and offers</p>
+          </div>
+          <form class="newsletter-form">
+            <input
+              type="email"
+              class="newsletter-input"
+              placeholder="Enter your email"
+            />
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h4>Popular categories</h4>
+            <ul>
+              <li><a href="#">Air conditioning</a></li>
+              <li><a href="#">Plumbing</a></li>
+              <li><a href="#">Cleaning</a></li>
+              <li><a href="#">Electrical</a></li>
+              <li><a href="#">Landscaping</a></li>
+              <li><a href="#">Painting</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Help center</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>For professionals</h4>
+            <ul>
+              <li><a href="#">Sign up as a pro</a></li>
+              <li><a href="#">Resource center</a></li>
+              <li><a href="#">Pro app</a></li>
+              <li><a href="#">Success stories</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">Help center</a></li>
+              <li><a href="#">Safety</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            <div class="logo" style="margin-bottom: 1rem">Finder</div>
+            <p style="color: #a0aec0; font-size: 0.9rem">
+              © 2024 Finder. All rights reserved.
+            </p>
+          </div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Customize Sidebar -->
+    <div class="customize-sidebar" id="customizeSidebar">
+      <div class="customize-header">
+        <h2 class="customize-title">Customize</h2>
+        <button class="close-customize" onclick="toggleCustomize()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="customize-section">
+        <h3>Theme</h3>
+        <div style="display: flex; gap: 1rem; margin-bottom: 1rem">
+          <button
+            onclick="setTheme('light')"
+            style="
+              padding: 0.5rem 1rem;
+              border: 2px solid var(--border-color);
+              background: var(--bg-white);
+              border-radius: 5px;
+              cursor: pointer;
+            "
+          >
+            Light
+          </button>
+          <button
+            onclick="setTheme('dark')"
+            style="
+              padding: 0.5rem 1rem;
+              border: 2px solid var(--border-color);
+              background: var(--bg-white);
+              border-radius: 5px;
+              cursor: pointer;
+            "
+          >
+            Dark
+          </button>
+        </div>
+      </div>
+
+      <div class="customize-section">
+        <h3>Primary Color</h3>
+        <div class="color-options">
+          <div
+            class="color-option active"
+            style="background: #3d7a81"
+            onclick="changeColor('#3d7a81', '#6bb6a8')"
+          ></div>
+          <div
+            class="color-option"
+            style="background: #3498db"
+            onclick="changeColor('#3498db', '#5dade2')"
+          ></div>
+          <div
+            class="color-option"
+            style="background: #e74c3c"
+            onclick="changeColor('#e74c3c', '#ec7063')"
+          ></div>
+          <div
+            class="color-option"
+            style="background: #f39c12"
+            onclick="changeColor('#f39c12', '#f7dc6f')"
+          ></div>
+          <div
+            class="color-option"
+            style="background: #9b59b6"
+            onclick="changeColor('#9b59b6', '#bb8fce')"
+          ></div>
+          <div
+            class="color-option"
+            style="background: #1abc9c"
+            onclick="changeColor('#1abc9c', '#48c9b0')"
+          ></div>
+        </div>
+      </div>
+
+      <div class="customize-section">
+        <h3>Font Family</h3>
+        <div class="font-options">
+          <div
+            class="font-option active"
+            onclick="changeFont('system')"
+            style="
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                sans-serif;
+            "
+          >
+            <strong>System Default</strong><br />
+            <small>Modern and clean</small>
+          </div>
+          <div
+            class="font-option"
+            onclick="changeFont('serif')"
+            style="font-family: Georgia, serif"
+          >
+            <strong>Serif</strong><br />
+            <small>Traditional and elegant</small>
+          </div>
+          <div
+            class="font-option"
+            onclick="changeFont('mono')"
+            style="font-family: 'Courier New', monospace"
+          >
+            <strong>Monospace</strong><br />
+            <small>Technical and precise</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- js -->
+    <script src="./script.js" />
+  </body>
+</html>
